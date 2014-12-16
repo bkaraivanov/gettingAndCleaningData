@@ -63,6 +63,7 @@ run_analysis <- function () {
     # Replace the activity codes with activity names.
     meanAndStdData$activity <- activityNames[meanAndStdData$activity]
     
+    
     ###########################################################################
     ###########################################################################
     ####### Tidy the data.
@@ -78,6 +79,4 @@ run_analysis <- function () {
     paste0(as.character(seq(1:length(varNames))), ".")
     write(rbind(paste0(as.character(seq(1:length(varNames))), "."), varNames), 
           "variableNames.txt", ncolumns = 2)
-    
-    tidyData
 }
